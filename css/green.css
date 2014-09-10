@@ -1,0 +1,49 @@
+/* --
+	
+	* Green CSS File *
+	This file contains styles related to the colour scheme of the theme
+	--
+	Please make any amendments to "custom.css" rather than this file
+	This will make updating your theme files much easier without overwriting your changes!
+
+-- */
+
+a,
+#top-bar a:hover,
+#logo a:hover,
+.widget-title,
+#recent-news-block .entry-title a:hover,
+#featured-posts-block .entry-title a:hover,
+.category-block .entry-title a:hover,
+.category-block-summary .entry-title a:hover,
+.tz_tweet_widget a:hover,
+.xoxo a:hover,
+.tz_tab_widget #tab-items li a:hover,
+.tz_tab_widget #tab-items li.ui-tabs-selected a,
+.tz_tab_widget #tab-items li.ui-state-active a,
+.tz_tab_widget .entry-title a:hover,
+.widget ul li a:hover,
+#related-posts .entry-title a:hover, 
+p.breadcrumb,
+li.bypostauthor cite, li.bypostauthor cite a,
+li.comment cite a:hover,
+#archive-posts .post-container .entry-title a:hover,
+#single-column-right ul.share li a:hover,
+#single-column-right ul.rss li a:hover,
+#secondary-nav ul li.current_page_item a,
+#secondary-nav ul li.current_page_item li a:hover,
+#secondary-nav ul li.current_menu_item a,
+#secondary-nav ul li.current_menu_item a:hover
+{ color: #669933; }
+
+.tz_tweet_widget span a
+{ color: #669933!important; }
+
+.widget_search #searchsubmit,
+.tab-tags a:hover, 
+#commentform input#submit,
+#contactForm button
+{ background: #669933; color: #fff; }
+
+.widget-title a { padding-right: 8px; background: url(../images/bg-arrow-green.png) right 3px no-repeat; }
+.widget-title a:hover { background: url(../images/bg-arrow-black.png) right 3px no-repeat; text-decoration: none; color: #333; }

@@ -1,0 +1,80 @@
+/* --
+	
+	* Custom CSS File *
+	Please make any amendments to your theme's CSS in this file rather than "styles.css"
+	This will make updating your theme files much easier without overwriting your changes!
+
+-- */
+
+/* Example: Change the background colour to black (!important is used to overwrite any duplicate classes in styles.css)
+body { background: #000!important; } */
+
+
+/*Scoreboard styles*/
+.player_info h3 {float: left; font-size:36px; font-weight:bold; padding-right:15px; height:65px; text-align:center; line-height:65px; border-right:1px solid #CCC; margin-right:15px;}
+						.player_info h3 span { font-size: 20px; line-height: 20px; vertical-align: 15px;}
+						.stats_table { width:620px; border: none; margin-top:10px;}
+						.stats_table tr, .goalie_stats_table tr, .shots_stats_table tr{ border: none;}
+						.stats_table tr.even td, .goalie_stats_table tr.even td, .shots_stats_table tr.even td{ background-color:#F0F0F0;}
+						.stats_table tr.odd  td, .goalie_stats_table tr.even td, .shots_stats_table tr.even td{ background-color:#FFF;}
+						.stats_table tr.mtl  td, .goalie_stats_table tr.mtl td, .shots_stats_table tr.mtl td{ background-color:#FDE6E6;}
+						.stats_table td, .stats_table th{ text-align:left;}
+						.goalie_stats_table { width:230px; border: none; margin-top:10px;}
+						.shots_stats_table { width:360px; border: none; margin-top:10px;}
+						
+						#livescore{ position:relative; width:435px; height:152px; background:url('/wp-content/uploads/stats/scoreboard-bg.gif') no-repeat; margin-bottom:25px; }
+						#livescore table{ width:415px; text-align:left; border:none; position:absolute; top:70px;}
+						#livescore table tr{ border:none;}
+						#livescore table td.left, #livescore table th.left{ text-align:left; }
+						
+						.home_team_img {display:block; position:absolute; top:1px; left:78px;}
+						.away_team_img {display:block; position:absolute;  top:1px; left:263px;}
+						.home_team_score { background:url('/wp-content/uploads/stats/home_score_bg.gif') no-repeat; color:#FFF; font-size:16px; font-weight:bold; height:25px; width:30px; display:block; position:absolute; top:10px; left:173px; text-align:center; padding-top:5px;}
+						.away_team_score { background:url('/wp-content/uploads/stats/away_score_bg.gif') no-repeat; color:#FFF; font-size:16px; font-weight:bold; height:25px; width:30px; display:block; position:absolute; top:10px; left:223px; text-align:center; padding-top:5px;}
+						.period_time_display { position:absolute; left:173px; top:50px; background-color:#2D4583; color:#FFF; width:80px; text-align:center;}
+						#livescore  .separator { display:block; position:absolute; top:10px; left:212px; height:30px; width:1px;}
+						
+						
+/*Roster/Player styles*/
+.player_photo { float: left; margin-right:15px; }
+						.player_info {}
+						.player_info h3 {float: left; font-size:36px; font-weight:bold; padding-right:15px; height:65px; text-align:center; line-height:65px; border-right:1px solid #CCC; margin-right:15px;}
+						.player_info h3 span { font-size: 20px; line-height: 20px; vertical-align: 15px;}
+						.player_stats_table { width:620px; border: none;}
+						.player_stats_table tbody { width:620px; border: 1px solid #CCC; }
+						.player_stats_table tbody .player_first {width:200px; text-align:left;}
+						.player_stats_table tbody td { width:30px;}
+						.player_stats_table tbody td.odd { background-color:#F0F0F0;}
+						.stats_legend { font-size:9px; color:#CCC;}
+						
+						
+						/*Scoreboard Widget Styles*/
+						#scoreboard_widget { width:300px; height:68px; background: url(/wp-content/themes/deadline/images/live-scoreboard.png) no-repeat; position:relative;}
+						
+						p.home_team, p.away_team, p.timer_label, p.period_label {position:absolute; margin:0; font: bold 14px Arial, sans-serif; color: #fff; top:10px; text-shadow: #172551 -1px -1px 0;}
+						
+						p.home_score, p.home_score_02 , p.away_score, p.away_score_02, p.timer, p.period, p.timer_02, p.period_02 {position:absolute; font: 28px/28px Courier, monospace; color: #ffa800; margin:0; top:26px; text-align:right;}								
+						p.home_score, p.home_score_02 {left:7px; width:38px;}
+						p.away_score, p.away_score_02{left:66px; width:38px;}
+						p.timer, p.timer_02 {left:141px; width:84px;}
+						p.period, p.period_02 {left:250px;}
+						
+						p.home_score_02, p.away_score_02, p.period_02, p.timer_02 {color:#292929;}
+					
+						p.home_team {left:12px;}
+						p.away_team {left:70px;}
+						p.timer_label {left:140px;}
+						p.period_label {left:246px;}
+						
+						#scoreboard_overlay { background-color:#000; width:300px; height:66px; opacity:0.8;
+filter:alpha(opacity=80); position:relative;}
+						p.next_game{ color:#FFF; position:absolute; top:26px; margin:0; text-align:center; text-shadow: #000 -1px -1px 2; width:300px;}
+						
+						/*Past Games tables*/
+						table.past_games, table.past_games td, table.past_games tr { border:none!important;}
+						table.past_games th {border-bottom:1px solid #CCC;}
+						table.past_games img {vertical-align:middle; margin-right:10px;}
+						table.past_games tr.even, table.past_games tr.even td { background-color:#F0F0F0;}
+						
+
+

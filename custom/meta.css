@@ -1,0 +1,17 @@
+.ooyala_id_control .description
+{ display:none; }
+
+.ooyala_id_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; }
+
+.ooyala_id_control label span
+{ display:inline; font-weight:normal; }
+
+.ooyala_id_control span
+{ color:#999; display:block; }
+
+.ooyala_id_control textarea, .ooyala_id_control input[type='text']
+{ margin-bottom:3px; width:99%; }
+
+.ooyala_id_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
