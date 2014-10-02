@@ -431,7 +431,7 @@ function setup_types() {
 }
 */
 
-add_action('init', 'setup_types');
+//add_action('init', 'setup_types');
 
 add_action('thesis_hook_byline_item','fb_share');
 
@@ -534,5 +534,207 @@ add_filter('request', 'remove_page_from_query_string');
 define('MY_WORDPRESS_FOLDER',$_SERVER['DOCUMENT_ROOT']);
 define('deadline',str_replace('\\','/',dirname(__FILE__)));
 define('MY_THEME_PATH','/' . substr(deadline,stripos(deadline,'wp-content')));
+
+
+
+
+
+
+
+
+
+add_action('admin_init','kaltura_id_init');
+
+function kaltura_id_init()
+{
+	// review the function reference for parameter details
+	// http://codex.wordpress.org/Function_Reference/wp_enqueue_script
+	// http://codex.wordpress.org/Function_Reference/wp_enqueue_style
+
+	//wp_enqueue_script('my_meta_js', MY_THEME_PATH . '/custom/meta.js', array('jquery'));
+	wp_enqueue_style('ooyala_id_css', MY_THEME_PATH . '/custom/meta.css');
+
+	// review the function reference for parameter details
+	// http://codex.wordpress.org/Function_Reference/add_meta_box
+
+	foreach (array('post','page') as $type) 
+	{
+		add_meta_box('my_all_meta', 'HIO Show', 'kaltura_id_setup', $type, 'normal', 'high');
+		add_meta_box( 'video_id', 'Video ID', 'kaltura_id_setup', $type, 'normal', 'high');
+	}
+	
+	add_action('save_post','kaltura_id_save');
+}
+
+function kaltura_id_setup()
+{
+	global $post;
+ 
+	// using an underscore, prevents the meta variable
+	// from showing up in the custom fields section
+	$meta = get_post_meta($post->ID,'_kaltura_id',TRUE);
+ 
+	// instead of writing HTML here, lets do an include
+	include(deadline . '/custom/meta-kaltura.php');
+ 
+	// create a custom nonce for submit verification later
+	echo '<input type="hidden" name="kaltura_id_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
+}
+ 
+function kaltura_id_save($post_id) 
+{
+	// authentication checks
+
+	// make sure data came from our meta box
+	if (!wp_verify_nonce($_POST['kaltura_id_noncename'],__FILE__)) return $post_id;
+
+	// check user permissions
+	if ($_POST['post_type'] == 'page') 
+	{
+		if (!current_user_can('edit_page', $post_id)) return $post_id;
+	}
+	else 
+	{
+		if (!current_user_can('edit_post', $post_id)) return $post_id;
+	}
+
+	// authentication passed, save data
+
+	// var types
+	// single: _my_meta[var]
+	// array: _my_meta[var][]
+	// grouped array: _my_meta[var_group][0][var_1], _my_meta[var_group][0][var_2]
+
+	$current_data = get_post_meta($post_id, '_kaltura_id', TRUE);	
+ 
+	$new_data = $_POST['_kaltura_id'];
+
+	ooyala_id_clean($new_data);
+	
+	if ($current_data) 
+	{
+		if (is_null($new_data)) delete_post_meta($post_id,'_kaltura_id');
+		else update_post_meta($post_id,'_kaltura_id',$new_data);
+	}
+	elseif (!is_null($new_data))
+	{
+		add_post_meta($post_id,'_kaltura_id',$new_data,TRUE);
+	}
+
+	return $post_id;
+}
+
+
+
+add_action('admin_init','ooyala_id_init');
+
+function ooyala_id_init()
+{
+	// review the function reference for parameter details
+	// http://codex.wordpress.org/Function_Reference/wp_enqueue_script
+	// http://codex.wordpress.org/Function_Reference/wp_enqueue_style
+
+	//wp_enqueue_script('my_meta_js', MY_THEME_PATH . '/custom/meta.js', array('jquery'));
+	wp_enqueue_style('ooyala_id_css', MY_THEME_PATH . '/custom/meta.css');
+
+	// review the function reference for parameter details
+	// http://codex.wordpress.org/Function_Reference/add_meta_box
+
+	foreach (array('post','page') as $type) 
+	{
+		add_meta_box('my_all_meta', 'HIO Show', 'ooyala_id_setup', $type, 'normal', 'high');
+	}
+	
+	add_action('save_post','ooyala_id_save');
+}
+
+function ooyala_id_setup()
+{
+	global $post;
+ 
+	// using an underscore, prevents the meta variable
+	// from showing up in the custom fields section
+	$meta = get_post_meta($post->ID,'_ooyala_id',TRUE);
+ 
+	// instead of writing HTML here, lets do an include
+	include(deadline . '/custom/meta.php');
+ 
+	// create a custom nonce for submit verification later
+	echo '<input type="hidden" name="ooyala_id_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
+}
+ 
+function ooyala_id_save($post_id) 
+{
+	// authentication checks
+
+	// make sure data came from our meta box
+	if (!wp_verify_nonce($_POST['ooyala_id_noncename'],__FILE__)) return $post_id;
+
+	// check user permissions
+	if ($_POST['post_type'] == 'page') 
+	{
+		if (!current_user_can('edit_page', $post_id)) return $post_id;
+	}
+	else 
+	{
+		if (!current_user_can('edit_post', $post_id)) return $post_id;
+	}
+
+	// authentication passed, save data
+
+	// var types
+	// single: _my_meta[var]
+	// array: _my_meta[var][]
+	// grouped array: _my_meta[var_group][0][var_1], _my_meta[var_group][0][var_2]
+
+	$current_data = get_post_meta($post_id, '_ooyala_id', TRUE);	
+ 
+	$new_data = $_POST['_ooyala_id'];
+
+	ooyala_id_clean($new_data);
+	
+	if ($current_data) 
+	{
+		if (is_null($new_data)) delete_post_meta($post_id,'_ooyala_id');
+		else update_post_meta($post_id,'_ooyala_id',$new_data);
+	}
+	elseif (!is_null($new_data))
+	{
+		add_post_meta($post_id,'_ooyala_id',$new_data,TRUE);
+	}
+
+	return $post_id;
+}
+
+function ooyala_id_clean(&$arr)
+{
+	if (is_array($arr))
+	{
+		foreach ($arr as $i => $v)
+		{
+			if (is_array($arr[$i])) 
+			{
+				ooyala_id_clean($arr[$i]);
+
+				if (!count($arr[$i])) 
+				{
+					unset($arr[$i]);
+				}
+			}
+			else 
+			{
+				if (trim($arr[$i]) == '') 
+				{
+					unset($arr[$i]);
+				}
+			}
+		}
+
+		if (!count($arr)) 
+		{
+			$arr = NULL;
+		}
+	}
+}
 
 ?>

@@ -178,7 +178,7 @@ get_header(); ?>
 											<img src="<?php bloginfo('template_directory'); ?>/_img/hio-show/Stu_Cowan.jpeg" alt="Stu Cowan"></div>
 										<div class="hio-footer-host-info-box">
 											<p>
-												Montrealer Stu has been part of The Gazette sports department for over 25 years. Apart from overseeing the sports department, he writes a Saturday column, oversees <a href="http://www.hockeyinsideout.com" target="_blank">hockeyinsideout.com</a> and blogs about sports at <a href="http://montrealgazette.com/stuonsports" target="_blank">montrealgazette.com/stuonsports</a>.
+												Montrealer Stu has been part of The Gazette sports department for over 25 years. Apart from overseeing the sports department, he writes a Saturday column, oversees <a href="http://staging.hockeyinsideout.com" target="_blank">hockeyinsideout.com</a> and blogs about sports at <a href="http://montrealgazette.com/stuonsports" target="_blank">montrealgazette.com/stuonsports</a>.
 											</p>
 										</div>
 										<div class="clear_it"></div>
@@ -196,7 +196,7 @@ get_header(); ?>
 										<div class="hio-footer-host-info-box">
 											<p>
 												
-Dave has been profiling people in the world of sports for over three decades. He is a Gazette columnist and sports feature writer who blogs news and his views on all things Canadiens at <a href="http://www.hockeyinsideout.com" target="_blank">hockeyinsideout.com</a>.
+Dave has been profiling people in the world of sports for over three decades. He is a Gazette columnist and sports feature writer who blogs news and his views on all things Canadiens at <a href="http://staging.hockeyinsideout.com" target="_blank">hockeyinsideout.com</a>.
 												
 											</p>
 										</div>

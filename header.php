@@ -35,8 +35,7 @@ if (story_page>=1) {
                         "zone": "index",
                         "keys": {
                             "nk": "print",
-                            "pr": "mg",
-                            "pr": "habsio",                     
+                            "pr": ["habsio","mg"],                    
                             "cnt" : "sports",
                             "ck": <?php if (in_category( 'show' )) { echo "\"show\"";  } else { echo "\"index\""; }  ?>,
                             "page": pm_page
@@ -88,6 +87,22 @@ if (story_page>=1) {
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.color.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.custom.js"></script>
 	
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/flexslider.css" type="text/css" media="all" />
+	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+			//$('.flexslider').flexslider();
+			
+			jQuery('#mainSlider').flexslider({
+				animation: "fade",
+				pauseOnAction: true, 
+				after: function(slider) { if (!slider.playing) { slider.play(); } }
+			});
+		});
+	</script>
+		
 	<?php if (($tz_news_pictures == "true") && (is_home())) { /* if is hompage and "news in pcitures" is enabled */ ?>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.galleriffic.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.opacityrollover.js"></script>
@@ -257,12 +272,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 							if(is_user_logged_in()) {
 							echo "Hi <a href='/wp-admin/profile.php'>".$userdata->user_login."</a>
-								 | 
+								 / 
 								<a href='".wp_logout_url(get_permalink()) . "'>Logout</a>";
 							
 							}else {
 								echo "<a href='/wp-login.php?redirect_to=".urlencode(get_permalink())."'>Login</a> | 
-									<a href='/wp-login.php?action=register'>Sign up</a>
+									<a href='/wp-login.php?action=register'>Sign Up</a>
 									";
 							}
 ?>

@@ -28,7 +28,7 @@ Template Name: Latest Polls Widget
 					echo "<p><strong>" . $poll_question -> pollq_question . "</strong></p>";
 				?>
                 
-                <a href="http://www.hockeyinsideout.com?utm_source=MG-sports&utm_medium=text-link&utm_campaign=hio-poll-widget#poll-widget" class="hio-link" target="_blank">Click here to vote in our Poll</a>
+                <a href="http://staging.hockeyinsideout.com?utm_source=MG-sports&utm_medium=text-link&utm_campaign=hio-poll-widget#poll-widget" class="hio-link" target="_blank">Click here to vote in our Poll</a>
          </div>
     </body>
 </html>

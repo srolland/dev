@@ -43,5 +43,5 @@ Template Name: Latest Posts Widget 02
 			
 				<?php endwhile; /* end latest posts */ ?>
 				</ul>
-                <a href="http://www.hockeyinsideout.com?utm_source=MG-sports&utm_medium=text-link&utm_campaign=hio-widget" class="post-link hio-link" target="_blank">Visit Hockey Inside/Out</a>
+                <a href="http://staging.hockeyinsideout.com?utm_source=MG-sports&utm_medium=text-link&utm_campaign=hio-widget" class="post-link hio-link" target="_blank">Visit Hockey Inside/Out</a>
                 </div>

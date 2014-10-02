@@ -51,7 +51,7 @@
 			
 			<div class="hio-header-box">
 									<div class="hio-header-logo-box">
-										<img src="http://www.hockeyinsideout.com/wp-content/themes/deadline/_img/hio-show/hio_show_logo.png" alt="hio_show_logo" width="174" height="66" />
+										<img src="http://staging.hockeyinsideout.com/wp-content/themes/deadline/_img/hio-show/hio_show_logo.png" alt="hio_show_logo" width="174" height="66" />
 									</div>
 									<div class="hio-header-intro-box">
 										Welcome to the Hockey Inside/Out Show.  Host Stu Cowan and his guests engage in spirited, yet good natured, debates centered around the NHL, more specifically the Montreal Canadiens.

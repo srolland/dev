@@ -5,7 +5,7 @@
 						<?php $rc = 0; ?>
 					
 						<?php /* show recent post list */
-						$tz_recent_posts = new WP_Query(); $tz_recent_posts->query('offset=1&caller_get_posts=1&posts_per_page=' . $tz_recent_number . ''); ?>
+						$tz_recent_posts = new WP_Query(); $tz_recent_posts->query('offset=4&caller_get_posts=1&posts_per_page=6'); ?>
 						<?php while ($tz_recent_posts->have_posts()) : $tz_recent_posts->the_post(); ?>
 						
 						<?php $rc++; ?>
@@ -14,7 +14,7 @@
 						<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { /* if post has post thumbnail */ ?>
                       
 						<div class="post-thumb">
-							<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"><?php the_post_thumbnail('thumbnail-large2'); /* post thumbnail settings configured in functions.php */ ?></a>
+							<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'framework'), get_the_title()); ?>"><?php the_post_thumbnail('pbp-small'); /* post thumbnail settings configured in functions.php */ ?></a>
 						</div>
 						<?php }  ?>
 						<!--BEGIN .entry-meta .entry-header-->
@@ -31,7 +31,7 @@
                         </div>
 					</div>
 					<!--END .entry-summary -->
-					<div style="clear:both;">&nbsp;</div>
+					
 
 												
 			

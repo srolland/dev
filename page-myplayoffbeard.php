@@ -31,7 +31,7 @@ get_header(); ?>
 							
 						</div>
 						
-						<a href="http://www.hockeyinsideout.com/my-playoff-beard-photo/mosaic">Browse our mosaic of playoff beards &rarr;</a>
+						<a href="http://staging.hockeyinsideout.com/my-playoff-beard-photo/mosaic">Browse our mosaic of playoff beards &rarr;</a>
 						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 						
 						<script type="text/javascript">
@@ -51,7 +51,7 @@ get_header(); ?>
 									nextPage = jPics.slice(waypoint,(waypoint+12));
 									
 									jQuery.each(nextPage, function(i) { 
-											$('#mosaic_link').append('<a href="http://www.hockeyinsideout.com/my-playoff-beard-photo/mosaic"><img src="'+ this.thumb +'" style="margin: 0 15px 20px 0;"/></a>');
+											$('#mosaic_link').append('<a href="http://staging.hockeyinsideout.com/my-playoff-beard-photo/mosaic"><img src="'+ this.thumb +'" style="margin: 0 15px 20px 0;"/></a>');
 															
 									});
 

@@ -191,7 +191,7 @@ get_header(); ?>
 							<!--BEGIN .entry-content -->
 							<div class="entry-content">
 								<a href="/show/welcome-to-knuckles-korner">
-								<img src="http://www.hockeyinsideout.com/wp-content/uploads/2013/10/nilan-corner.jpg" width="620" height="349"></a>
+								<img src="http://staging.hockeyinsideout.com/wp-content/uploads/2013/10/nilan-corner.jpg" width="620" height="349"></a>
 								
 								<div class="entry-meta"></div>
 								
@@ -218,7 +218,7 @@ get_header(); ?>
 							
 								<div class="entry-content" style="float:right;">
 								<a href="/show/season-premiere">
-								<img src="http://www.hockeyinsideout.com/wp-content/uploads/2013/10/show1.jpg" width="290" height="162"></a>
+								<img src="http://staging.hockeyinsideout.com/wp-content/uploads/2013/10/show1.jpg" width="290" height="162"></a>
 								
 								<div class="entry-meta">
 								October 9, 2013
@@ -234,7 +234,7 @@ get_header(); ?>
 							<!--BEGIN .entry-content -->
 							<div class="entry-content">
 								<a href="/show/nilan-drops-the-gloves-for-hio-show">
-								<img src="http://www.hockeyinsideout.com/wp-content/uploads/2013/10/nylan-show.jpg" width="290" height="162"></a>
+								<img src="http://staging.hockeyinsideout.com/wp-content/uploads/2013/10/nylan-show.jpg" width="290" height="162"></a>
 								
 								<div class="entry-meta">
 								October 16, 2013
